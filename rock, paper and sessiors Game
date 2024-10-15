@@ -1,0 +1,33 @@
+import random
+
+options = ('rock', 'paper', 'sessiors')
+playing = True
+
+while playing:
+
+    player = None
+    computer = random.choice(options)
+
+    while player not in options:
+        player = input('Enter your choice - (Rock, Paper or sessiors ?) ').lower()
+
+    print(f'You : {player}')
+    print(f'Computer : {computer}')
+
+    if player == computer:
+        print('Match Tie')
+    elif player == 'rock' and computer == 'sessiors':
+        print('You Win!')
+    elif player == 'paper' and computer == 'rock':
+        print('You Win!')
+    elif player == 'sessiors' and computer == 'paper':
+        print('You Win!')
+    else:
+        print('You lose!')
+        play_again = input('Do you play again? (Yes or No): ').lower()
+
+        if play_again != 'yes':
+            playing = False
+
+
+print('Thank you for playing')
