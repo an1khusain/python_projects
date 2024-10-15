@@ -46,6 +46,15 @@ for die in range(num_of_dice):
 
 print(dice)
 
+#### FOR Horizontally Shape of dice_art ####
+     ----------------------------------
+for line in range(5):
+    for die in dice:
+        print(dice_art.get(die)[line], end='')
+    print()
+
+#### FOR Vertically Shape dice_art ####
+     ------------------------------
 for die in dice:
     for line in dice_art.get(die):
         print(line)
